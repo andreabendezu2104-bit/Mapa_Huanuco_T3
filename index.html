@@ -21,21 +21,28 @@
             padding: 0;
             margin: 0;
         }
-       /* Forzar tamaño del popup */
+      /* Forzar tamaño del popup */
        .ol-popup {
-           width: 300px !important;      /* tamaño fijo */
+           width: 300px !important;
            max-width: 300px !important;
-           max-height: 200px !important;
+           max-height: 250px !important;
            overflow-y: auto !important;
-           font-size: 13px !important;
            padding: 10px !important;
-        }
+           box-sizing: border-box !important;
+       }
 
-      /* Asegurar que el contenido también respete el tamaño */
-      .ol-popup-content {
-          max-width: 100% !important;
-          max-height: 100% !important;
-          overflow-y: auto !important;
+       /* Hacer que el contenido respete el ancho */
+       .ol-popup-content {
+           max-width: 100% !important;
+           overflow-y: auto !important;
+       }
+
+       /* Esta parte es la más importante:
+       Evita que la imagen haga gigante el popup */
+       .ol-popup img {
+           max-width: 100% !important;
+           height: auto !important;
+           display: block !important;
        }
 
         </style>
