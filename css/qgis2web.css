@@ -1,3 +1,25 @@
+    /* Forzar tamaño del popup */
+       .ol-popup {
+           width: 300px !important;
+           max-width: 300px !important;
+           max-height: 250px !important;
+           overflow-y: auto !important;
+           padding: 10px !important;
+           box-sizing: border-box !important;
+      }
+
+        /* Asegurar que el contenido respete el ancho */
+        .ol-popup-content {
+            max-width: 100% !important;
+            overflow-y: auto !important;
+       }
+
+        /* Evitar que las imágenes agranden el popup */
+        .ol-popup img {
+            max-width: 100% !important;
+            height: auto !important;
+            display: block !important;
+       }
 
         #map {
             background-color: #ffffff
@@ -330,4 +352,5 @@
                 2px 0px 0 #f1310e,
                 2px 1px 0 #f1310e,
                 2px 2px 0 #f1310e;
+
         }
