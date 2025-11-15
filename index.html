@@ -21,19 +21,23 @@
             padding: 0;
             margin: 0;
         }
-       .ol-popup {
+/* Forzar tamaño del popup */
+.ol-popup {
+    width: 300px !important;      /* tamaño fijo */
+    max-width: 300px !important;
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    font-size: 13px !important;
+    padding: 10px !important;
+}
 
-	       max-width: 300px !important;
+/* Asegurar que el contenido también respete el tamaño */
+.ol-popup-content {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+}
 
-	       max-height: 200px !important;
-
-	       overflow-y: auto !important;
-
-	       font-size: 13px;
-
-	       padding: 10px;
-
-	    }		
         </style>
         <style>
         #popup-content table {
