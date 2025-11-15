@@ -22,29 +22,25 @@
             margin: 0;
         }
       /* Forzar tamaño del popup */
-       .ol-popup {
-           width: 300px !important;
+       /* Tamaño del popup Leaflet */
+       .leaflet-popup-content-wrapper {
            max-width: 300px !important;
            max-height: 250px !important;
            overflow-y: auto !important;
-           padding: 10px !important;
-           box-sizing: border-box !important;
-       }
+        }
 
-       /* Hacer que el contenido respete el ancho */
-       .ol-popup-content {
-           max-width: 100% !important;
-           overflow-y: auto !important;
-       }
+/* Para que el contenido no se desborde */
+       .leaflet-popup-content {
+            max-width: 100% !important;
+            overflow-y: auto !important;
+	   }
 
-       /* Esta parte es la más importante:
-       Evita que la imagen haga gigante el popup */
-       .ol-popup img {
+/* Evitar que la imagen agrande el popup */
+       .leaflet-popup-content img {
            max-width: 100% !important;
            height: auto !important;
            display: block !important;
        }
-
         </style>
         <style>
         #popup-content table {
